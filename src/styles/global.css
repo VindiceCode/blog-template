@@ -3,38 +3,47 @@
 @tailwind utilities;
 
 @layer base {
-	/* body {
-		transition: background-color 0.5s ease;
-	} */
-
-	.prose code {
-		@apply text-base;
+	body {
+		@apply bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100;
+		transition: background-color 0.3s ease, color 0.3s ease;
 	}
 
-	/* prose styles here */
+	.prose code {
+		@apply text-base bg-gray-100 dark:bg-gray-800 rounded px-1;
+	}
+
 	.prose h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply text-zinc-800 dark:text-zinc-100   !important;
+	.prose h2,
+	.prose h3,
+	.prose h4,
+	.prose h5,
+	.prose h6 {
+		@apply text-gray-800 dark:text-gray-100 font-semibold;
+	}
+
+	a {
+		@apply text-blue-600 dark:text-blue-400 underline;
+		transition: color 0.3s ease;
+	}
+
+	a:hover {
+		@apply text-blue-800 dark:text-blue-200;
 	}
 
 	html.dark .shiki,
 	html.dark .shiki span {
-	  color: var(--shiki-dark) !important;
-	  background-color: theme(colors.gray.900) !important;
+		color: var(--shiki-dark) !important;
+		background-color: theme(colors.gray.900) !important;
 	}
 }
 
 .glass {
-	background: rgba(57, 56, 56, 0.52);
-	backdrop-filter: blur(13px) saturate(150%);
-	-webkit-backdrop-filter: blur(13px) saturate(150%);
-	z-index: -1;
+	background: rgba(255, 255, 255, 0.6);
+	backdrop-filter: blur(10px) saturate(180%);
+	-webkit-backdrop-filter: blur(10px) saturate(180%);
+	border-radius: 8px;
 }
 
 .shadow {
-	box-shadow: -5px 3px 8px 1px rgba(0, 0, 0, 0.12);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
