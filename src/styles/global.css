@@ -9,7 +9,7 @@
 	}
 
 	.prose code {
-		@apply text-base bg-gray-100 dark:bg-gray-800 rounded px-1;
+		@apply text-base bg-gray-100 dark:bg-gray-800 rounded px-1 transition-all duration-200;
 	}
 
 	.prose h1,
@@ -22,12 +22,11 @@
 	}
 
 	a {
-		@apply text-blue-600 dark:text-blue-400 underline;
-		transition: color 0.3s ease;
+		@apply text-blue-600 dark:text-blue-400 underline transition-colors duration-300;
 	}
 
 	a:hover {
-		@apply text-blue-800 dark:text-blue-200;
+		@apply text-blue-800 dark:text-blue-200 transform scale-105;
 	}
 
 	html.dark .shiki,
